@@ -4,17 +4,17 @@ var app = express();
 var bodyParser = require('body-parser');
 var puerto = process.env.PORT || 3000;
 var db_dialogos = [];
+var path = require("path")
 
 
 // Usos de app
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.use(express.static('recurso-estaticos'))
+app.use(express.static('front-end'))
 
 // Metodo GET
-app.get('/dialogo', async function (consulta, respuesta) {
-  
- 
+app.get('/', async function (consulta, respuesta) {
+  respuesta.sendFile(path.join(__dirname, "../front-end/index.html"))
 })
 
 // Metodo POST

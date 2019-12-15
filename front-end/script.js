@@ -1,27 +1,22 @@
 
-// function inicio() {
-//   var h1 = document.getElementById('titulo');
-//   h1 = h1.remove()
-//   var boton = document.getElementById('boton');
-//   boton = boton.remove()
 
 var dialogo = document.getElementById('dialogo');
 var personaje = document.getElementById("personaje");
 var mov = 300;
 var action = 0;
-
+console.log(NombreUsuario)
 
 function mover(event) {
 
    if (event.key === "ArrowRight") {
-      mov += 50
+      mov += 10
       personaje.style.animation = "mymove 0.8s infinite step-end"
       personaje.style.left = "200px"
       personaje.style.left = mov + "px";
 
    }
    if (event.key === "ArrowLeft") {
-      mov -= 50
+      mov -= 10
       personaje.style.animation = "mymove2 0.8s infinite step-end"
       personaje.style.left = mov + "px";
    }
@@ -70,7 +65,6 @@ function mover(event) {
 
       stage2.insertAdjacentHTML('beforebegin', `
       
-     
    <div id="Fondo2">
    </div>
    <div id="personaje3" >
@@ -83,7 +77,7 @@ document.body.addEventListener('keydown', mover)
 var stage1 = document.getElementById("stage1");
 var cont1 = document.getElementById('cont1')
 var dialogo = 0
-
+var dato = {}
 //................... felix ......................
 
 function conversar(event) {
@@ -123,22 +117,11 @@ function conversar(event) {
 var selectValue
 
 function continuar_dialogo() {
-   var select = document.getElementById("dialogo");
-   var strUser = select.options[select.selectedIndex].innerText;
 
-   var url = 'https://localhost:3000/dialogo';
-   var data = {dialogo: strUser};
-
-   fetch(url, {
-     method: 'POST', 
-     body: JSON.stringify(data), 
-     headers:{
-       'Content-Type': 'application/json'
-     }
-   }).then(res => res.json())
-
-   console.log(strUser)
-
+   var select = document.getElementById("dialogo")
+   dato.PrimerDialogo = select.options[select.selectedIndex].innerText;
+ 
+   console.log(dato)
    document.body.removeEventListener('keydown', conversar)
 
    selectValue = document.getElementById("dialogo").value;
@@ -331,7 +314,6 @@ function conversar4(event) {
     </div>
         `)
    }
-
 }
 
 
@@ -339,7 +321,10 @@ function conversar4(event) {
 
 
 function conversar5() {
-
+   
+   var select = document.getElementById("dialogo1")
+   dato.SegundoDialogo = select.options[select.selectedIndex].innerText;
+   console.log(dato)
    document.body.removeEventListener('keydown', conversar4)
    selectValue = document.getElementById("dialogo1").value;
    cont1 = document.getElementById('cont1')
@@ -530,6 +515,10 @@ function conversar8(event) {
 // ................... marta ......................
 
 function conversar9() {
+
+   var select = document.getElementById("dialogo1")
+   dato.TercerDialogo = select.options[select.selectedIndex].innerText;
+   console.log(dato)
    selectValue = document.getElementById("dialogo1").value;
 
    if (selectValue == "res4" || selectValue == "res5" || selectValue == "res6") {
@@ -654,6 +643,9 @@ function conversar_part2_(event) {
 
 function continuar_dialogo1() {
 
+   var select = document.getElementById("dialogo")
+   dato.CuartoDialogo = select.options[select.selectedIndex].innerText;
+   console.log(dato)
    selectValue = document.getElementById("dialogo").value;
    cont1 = document.getElementById('cont1')
    cont1.remove()
@@ -846,6 +838,9 @@ function conversar_part2_5(event) {
 // ....................Elis..................
 function continuar_dialogo2() {
 
+   var select = document.getElementById("dialogo")
+   dato.CuartoDialogo = select.options[select.selectedIndex].innerText;
+   console.log(dato)
    document.body.removeEventListener('keydown', conversar_part2_5)
    selectValue = document.getElementById("dialogo").value;
    cont1 = document.getElementById('cont1')
@@ -1066,6 +1061,7 @@ function conversar_part2_11() {
    }
 }
 
+var cont2
 
 function conversar_part2_12(event) {
 
@@ -1081,34 +1077,75 @@ function conversar_part2_12(event) {
            <p>¿Que clase de criatura es esa...? ¿no se suponia que deberia de encontrar slimes?</p>
        </div> 
        </div>
-           `)
+           `)         
+     cont2 = document.getElementById('cont2')
       document.body.addEventListener('keydown', conversar_part2_13)
    }
 }
 
 function conversar_part2_13(event) {
 
+  
+
    document.body.removeEventListener('keydown', conversar_part2_12)
    if (event.key === "Enter") {
-
-
-      var cont2 = document.getElementById('cont1')
+    
       cont2.remove()
       stage1.insertAdjacentHTML('afterbegin', `
-       <div id="cont2">
-          <div id="imgDialogo3">
-          </div>
-           <div id='globoDialogo'>
-           <h1>???</h1>
-           <p> . . . . . </p>
-       </div> 
-       </div>
-   
-           `)
+      <div id="cont2">
+           <div id="imgDialogo3">
+           </div>
+            <div id='globoDialogo'>
+            <h1>???</h1>
+            <p> . . . . . </p>
+        </div> 
+        </div>
+           `)         
+      // document.body.addEventListener('keydown', conversar_part2_13)
    }
-
-   // document.body.addEventListener('keydown', conversar_part2_14)
 }
+
+
+function enviar_dialogo(dato) {
+
+   var url = 'http://localhost:3000/dialogo';
+   var data = {dialogo: strUser};
+
+   fetch(url, {
+     method: 'POST', 
+     body: JSON.stringify(data), 
+     headers:{
+       'Content-Type': 'application/json'
+     }
+   }).then(res =>{ 
+      console.log(res)
+   })
+}
+
+
+// function conversar_part2_13(event) {
+
+//    document.body.removeEventListener('keydown', conversar_part2_12)
+//    if (event.key === "Enter") {
+
+
+//       var cont2 = document.getElementById('cont1')
+//       cont2.remove()
+//       stage1.insertAdjacentHTML('afterbegin', `
+//        <div id="cont2">
+//           <div id="imgDialogo3">
+//           </div>
+//            <div id='globoDialogo'>
+//            <h1>???</h1>
+//            <p> . . . . . </p>
+//        </div> 
+//        </div>
+   
+//            `)
+//    }
+
+//    // document.body.addEventListener('keydown', conversar_part2_14)
+// }
 
 
 
