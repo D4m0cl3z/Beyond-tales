@@ -7,6 +7,7 @@
 body{
     margin: 0;
     font-family: advanced_pixel-7;
+    background-color: black;
 }
 
 /* body {
@@ -46,6 +47,17 @@ body{
     font-family: advanced_pixel-7;
 }
 
+#Fondo3{
+    position: fixed;
+    height: 60vw;
+    width: 100vw;
+    background-image: url(l+y9Te.png);
+    background-repeat: no-repeat;
+    background-position: 2vw 0vw;
+    background-size: 96vw 51vw;
+    background-color: black;
+    font-family: advanced_pixel-7;
+}
 
 h1{
 
@@ -55,6 +67,22 @@ h1{
 p{
     font-size: 2.5vw;
     margin-top: -2vw; 
+}
+#telon h2{
+    position: absolute;
+    font-size: 8vw;
+    left: 40vw;
+    top: 20vw;
+    color: white;
+    animation: mymove3 10s ;
+}
+
+#telon h3{
+    position: absolute;
+    left: 49vw;
+    top: 36vw;
+    font-size: 2vw;
+    color: white;
 }
 
 
@@ -98,6 +126,19 @@ p{
 }
 
 
+#EnemigoFinal {
+    position: absolute;
+    height: 7.2vw;
+    width: 7vw;
+    background-position: -0.3vw -6.8vw;
+    top: 39.9vw;
+    background-image: url(Monster.png);
+    background-size: 80vw;
+    background-repeat: no-repeat;
+    animation: mymove5 0.8s infinite step-end ;
+    left: 68vw;
+}
+
 @keyframes mymove {
     0%{background-position: -46.5vw -13.23vw;}
     25%{background-position: -53vw -13.3vw;}
@@ -106,6 +147,20 @@ p{
 }
 
 @keyframes mymove2 {
+    0%{background-position: -46.5vw -6.6vw;}
+    25%{background-position: -53vw -6.6vw;}
+    50%{background-position: -46.5vw -6.6vw;}
+    75%{background-position: -40vw -6.6vw;}
+}
+
+@keyframes mymove5 {
+    0%{ background-position: -0.3vw -6.8vw;}
+    25%{background-position: -7.1vw -6.8vw;}
+    50%{background-position: -0.3vw -6.8vw;}
+    75%{background-position: -13.5vw  -6.6vw;}
+}
+
+@keyframes mymove6 {
     0%{background-position: -46.5vw -6.6vw;}
     25%{background-position: -53vw -6.6vw;}
     50%{background-position: -46.5vw -6.6vw;}
@@ -154,4 +209,16 @@ p{
     left: 7vw;
     height: 30vh;
     background-color: rgba(100, 148, 237, 0.5);
+
 }
+
+
+@keyframes mymove3 {
+        0%{opacity: 1.0;}
+        25%{opacity: 0.5;}
+        50%{opacity: 0;}
+        75%{display: none;}
+    } 
+
+
+
