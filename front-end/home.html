@@ -19,11 +19,26 @@
         <input type="text" name="nombre">
 
     </form>
-    <button onclick="traer_nombre()"> <a href="index.html"> Empezar</a></button>
+    <button id="btn"> <a href="index.html"> Empezar</a></button>
     </div>
 
-    <script src="nombre.js"></script>
-<script src="script.js"></script>
+
+<script >
+
+const btn = document.getElementById("btn");
+        console.log(btn)
+        var NombreUsuario
+
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            NombreUsuario = product = document.getElementsByName("nombre")[0].value;
+            console.log(NombreUsuario);
+            localStorage.setItem('nombreUsuario', NombreUsuario);
+            window.location.href = "http://localhost:3000/juego";
+        }
+        )
+
+</script>
 
 </input>
 </body>

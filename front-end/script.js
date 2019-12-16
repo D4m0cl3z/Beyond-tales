@@ -1,10 +1,10 @@
 
-
+var dato = {}
 var dialogo = document.getElementById('dialogo');
 var personaje = document.getElementById("personaje");
 var mov = 300;
 var action = 0;
-console.log(NombreUsuario)
+dato.usuario = localStorage.getItem("nombreUsuario")
 
 function mover(event) {
 
@@ -77,7 +77,7 @@ document.body.addEventListener('keydown', mover)
 var stage1 = document.getElementById("stage1");
 var cont1 = document.getElementById('cont1')
 var dialogo = 0
-var dato = {}
+
 //................... felix ......................
 
 function conversar(event) {
@@ -1057,15 +1057,18 @@ function conversar_part2_11() {
       <div id="EnemigoFinal">
       </div>
   `)
-      document.body.addEventListener('keydown', conversar_part2_12)
+  
    }
+ document.body.addEventListener('keydown', conversar_part2_12)
 }
 
-var cont2
+
+
 
 function conversar_part2_12(event) {
 
    document.body.removeEventListener('keydown', conversar_part2_11)
+
    if (event.key === "Enter") {
 
       stage1.insertAdjacentHTML('afterbegin', `
@@ -1078,19 +1081,22 @@ function conversar_part2_12(event) {
        </div> 
        </div>
            `)         
-     cont2 = document.getElementById('cont2')
-      document.body.addEventListener('keydown', conversar_part2_13)
-   }
+
+     document.body.addEventListener('keydown', conversar_part2_13)
+   } 
+   
 }
 
 function conversar_part2_13(event) {
 
-  
+document.body.removeEventListener('keydown', conversar_part2_12)
 
-   document.body.removeEventListener('keydown', conversar_part2_12)
    if (event.key === "Enter") {
-    
+ 
+      enviar_dialogo(dato)
+      var cont2 = document.getElementById('cont2')
       cont2.remove()
+
       stage1.insertAdjacentHTML('afterbegin', `
       <div id="cont2">
            <div id="imgDialogo3">
@@ -1101,19 +1107,55 @@ function conversar_part2_13(event) {
         </div> 
         </div>
            `)         
-      // document.body.addEventListener('keydown', conversar_part2_13)
-   }
+     
+   } 
+   document.body.addEventListener('keydown', conversar_part2_14)
 }
 
+function conversar_part2_14(event) {
+
+   document.body.removeEventListener('keydown', conversar_part2_13)
+
+      if (event.key === "Enter") {
+     
+         var personaje = document.getElementById('personaje')
+         personaje.remove()
+         enviar_dialogo(dato)
+         var Fondo3= document.getElementById('Fondo3')
+         Fondo3.remove() 
+         var enemigo = document.getElementById('EnemigoFinal')
+         enemigo.remove()
+         var cont2 = document.getElementById('cont2')
+         cont2.remove()
+         stage1.insertAdjacentHTML('afterbegin', `
+         <div id="cont3">
+               <h1> En ese momento el aventurero sintio el verdadero temor, pero eso no lo detuvo a querer continuar con la aventura , Continuara... </h1>
+               <button  enctype="multipart/form-data" ><a href="/resumen"> Ver historial de aventura </a> </button>
+               </div> 
+           </div>
+              `)       
+              document.body.addEventListener('keydown', conversar_part2_15)  
+      }
+   }
+
+   function conversar_part2_15(event) {
+
+
+   if (event.key === "Enter") {
+  document.body.removeEventListener('keydown', conversar_part2_14)
+            var cont2 = document.getElementById('cont2')
+            cont2.remove()
+              
+         }
+      }
 
 function enviar_dialogo(dato) {
 
-   var url = 'http://localhost:3000/dialogo';
-   var data = {dialogo: strUser};
+   var url = 'http://localhost:3000/dialogo'
 
    fetch(url, {
      method: 'POST', 
-     body: JSON.stringify(data), 
+     body: JSON.stringify(dato), 
      headers:{
        'Content-Type': 'application/json'
      }
@@ -1121,6 +1163,7 @@ function enviar_dialogo(dato) {
       console.log(res)
    })
 }
+
 
 
 // function conversar_part2_13(event) {
