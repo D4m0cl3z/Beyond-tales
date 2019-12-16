@@ -2,28 +2,28 @@
 var dato = {}
 var dialogo = document.getElementById('dialogo');
 var personaje = document.getElementById("personaje");
-var mov = 300;
+var mov = 21;
 var action = 0;
 dato.usuario = localStorage.getItem("nombreUsuario")
 
 function mover(event) {
 
    if (event.key === "ArrowRight") {
-      mov += 10
+      mov += 0.5
       personaje.style.animation = "mymove 0.8s infinite step-end"
       personaje.style.left = "200px"
-      personaje.style.left = mov + "px";
+      personaje.style.left = mov + "vw";
 
    }
    if (event.key === "ArrowLeft") {
-      mov -= 10
+      mov -= 0.5
       personaje.style.animation = "mymove2 0.8s infinite step-end"
-      personaje.style.left = mov + "px";
+      personaje.style.left = mov + "vw";
    }
 
    // .......................Margot..........................
 
-   if (mov == 900 && action == 0) {
+   if (mov == 50 && action == 0) {
 
       document.body.removeEventListener('keydown', mover)
       stage1.insertAdjacentHTML('afterbegin', `
@@ -38,7 +38,7 @@ function mover(event) {
       document.body.addEventListener('keydown', conversar)
    }
 
-   if (mov == 900 && action == 1) {
+   if (mov == 50 && action == 1) {
       document.body.removeEventListener('keydown', mover)
       stage1.insertAdjacentHTML('afterbegin', `
       <div id="cont1">
@@ -54,9 +54,9 @@ function mover(event) {
       document.body.addEventListener('keydown', conversar_part2_)
    }
 
-   if (mov == 1750) {
+   if (mov == 92) {
       action++
-      mov = 200
+      mov = 7
       var Fondo = document.getElementById('Fondo')
       Fondo.remove()
       var personaje2 = document.getElementById('personaje2')
