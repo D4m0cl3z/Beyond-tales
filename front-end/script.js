@@ -11,13 +11,14 @@ function mover(event) {
    if (event.key === "ArrowRight") {
       mov += 0.5
       personaje.style.animation = "mymove 0.8s infinite step-end"
-      personaje.style.left = "200px"
+      personaje.style.left = "21vw"
       personaje.style.left = mov + "vw";
 
    }
    if (event.key === "ArrowLeft") {
       mov -= 0.5
       personaje.style.animation = "mymove2 0.8s infinite step-end"
+      personaje.style.left = "21vw"
       personaje.style.left = mov + "vw";
    }
 
