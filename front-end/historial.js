@@ -1,6 +1,6 @@
 
 function historialAventureros(callback) { 
-    var url = 'http://localhost:3000/Historial'
+    var url = '/Historial'
 
     fetch(url)
     .then(res => res.json())

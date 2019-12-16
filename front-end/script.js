@@ -1151,7 +1151,7 @@ function conversar_part2_14(event) {
 
 function enviar_dialogo(dato) {
 
-   var url = 'http://localhost:3000/dialogo'
+   var url = '/dialogo'
 
    fetch(url, {
      method: 'POST', 
