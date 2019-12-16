@@ -306,7 +306,7 @@ function conversar4(event) {
             <option>Seleccionar respuesta:</option>
                <option value="res4">A buscar fortunas</option>
                 <option value="res5">Para volverme un aclamado y famoso guerrero!  </option>
-                <option value="res6">Sali de mi pueblo salvar al mundo de la maldad </option>
+                <option value="res6">Sali de mi pueblo para salvar al mundo de la maldad </option>
             </select>
         </fieldset>
     </form>
@@ -558,7 +558,7 @@ function conversar10() {
           </div>
            <div id='globoDialogo'>
            <h1>Margot</h1>
-           <p>quien sabe? a lo mejor son puros cuentos para dormir¿o no? comoo sea... si continuas por este camino te contraras con una tienda, a lo mejor se te hace interesante </p>
+           <p>quien sabe? a lo mejor son puros cuentos para dormir¿o no? como sea... si continuas por este camino te contraras con una tienda, a lo mejor se te hace interesante </p>
        </div> 
        </div>
    
@@ -1121,8 +1121,9 @@ function conversar_part2_14(event) {
          cont2.remove()
 
          stage1.insertAdjacentHTML('afterbegin', `
-         <div class="home">
-               <h1> En ese momento el aventurero sintio el verdadero temor, pero eso no lo detuvo a querer continuar con la aventura , Continuara... </h1>
+         <div class="pagFinal">
+               <h1> En ese momento el aventurero sintio el verdadero temor, pero eso no lo detuvo a querer continuar con la aventura</h1> 
+              <h1> Continuara . . . </h1>
                <button onclick="enviar_dialogo()"  enctype="multipart/form-data" ><a href="/resumen"> Ver historial de aventura </a> </button>
            </div>
               `)           

@@ -4,6 +4,12 @@
     src: url("fuente/advanced_pixel-7.ttf");
 }
 
+select{
+    text-align: center;
+    font-size: 1.7vw;
+    font-family:advanced_pixel-7 ;
+}
+
 body{
     margin: 0;
     font-family: advanced_pixel-7;
@@ -219,8 +225,13 @@ p{
     } 
 
 .home h1{
-    font-size: 8vw;
+    font-size: 7vw;
  color: white;
+}
+
+.pagFinal h1{
+    color: white;
+font-size: 7vw;
 }
 
 .home h2{
@@ -228,13 +239,14 @@ p{
 font-size: 3vw;
 }
 
+
 .verde{
     color: greenyellow;
     margin-top: 0px;
 }
 .home{
-    font-size: 11vw;
-    text-align: center;
+
+text-align: center;
   margin-top: 10vw;
 }
 
@@ -244,6 +256,10 @@ font-size: 3vw;
   margin-top: 10vw;
 }
 
+.pagFinal{
+    text-align: center;
+    margin-top: 8vw;
+}
 #resumen {
         top: 7vw;
         text-align: center;
@@ -293,4 +309,14 @@ font-size:4vw;
     75%{background-position: -151vw -166.3vw;}
     100%{background-position: -137.1vw -166.3vw;}
 
+}
+
+button:hover{
+    color: rgb(212, 221, 199);
+}
+
+button{
+    font-family:advanced_pixel-7 ;
+    font-size: 3vw;
+ 
 }
