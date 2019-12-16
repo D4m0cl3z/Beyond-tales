@@ -20,7 +20,6 @@ ClienteMongo.connect(url,{ useUnifiedTopology: true}, async function (err, clien
 
   var dialogos = await db.collection('dialogos')
 
-  //  var dialogos = await db.collection('dialogos').find().toArray()
 
   console.log("conexion exitosa");
 

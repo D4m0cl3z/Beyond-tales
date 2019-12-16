@@ -21,7 +21,7 @@ function mover(event) {
       personaje.style.left = mov + "px";
    }
 
-   // .......................marta..........................
+   // .......................Margot..........................
 
    if (mov == 900 && action == 0) {
 
@@ -31,7 +31,7 @@ function mover(event) {
    <div id="imgDialogo1">
    </div> 
     <div id='globoDialogo'>
-    <h1>Marta</h1>
+    <h1>Margot</h1>
     <p>Hey!, ¿no sos demaciado joven como para andar por los acantilados? </p>
        </div>
     `)
@@ -78,7 +78,7 @@ var stage1 = document.getElementById("stage1");
 var cont1 = document.getElementById('cont1')
 var dialogo = 0
 
-//................... felix ......................
+//................... ${dato.usuario} ......................
 
 function conversar(event) {
 
@@ -92,13 +92,13 @@ function conversar(event) {
        <div id="imgDialogo">
        </div>
         <div id='globoDialogo'>
-        <h1>Felix</h1>
+        <h1>${dato.usuario}</h1>
         <form>
         <fieldset>
             <select name="dialogo" id="dialogo" onchange="continuar_dialogo()" >
             <option>Seleccionar respuesta:</option>
                <option value="res1">Hola! solo un poco</option>
-                <option value="res2">quiza, pero no es de su incunbencia</option>
+                <option value="res2">Quiza, pero no es de su incunbencia</option>
                 <option value="res3">No... en absoluto, para las aventuras no hay edad </option>
             </select>
 
@@ -112,7 +112,7 @@ function conversar(event) {
    }
 }
 
-// .......................marta..........................
+// .......................Margot..........................
 
 var selectValue
 
@@ -135,8 +135,8 @@ function continuar_dialogo() {
    </div> 
 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
-           <p>¿Un poco...? en los acantilados existen criaturas que te pueden devorar si no prestas atencion, pero tu tienes pinta de saber de lo que haces, ¿verdad? </p>
+           <h1>Margot</h1>
+           <p>¿Un poco...? en los acantilados existen criaturas que te pueden devorar si no prestas atencion, pero tu tienes pinta de saber lo que haces, ¿verdad? </p>
        </div> 
        </div>`
       )
@@ -149,7 +149,7 @@ function continuar_dialogo() {
    </div> 
 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
+           <h1>Margot</h1>
            <p>Niño arrogante... ¿acaso no sabes quien soy? </p>
        </div> 
        </div>`
@@ -162,8 +162,8 @@ function continuar_dialogo() {
       <div id="imgDialogo1">
    </div> 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
-           <p>Dicelo al ultimo aventurero que fue devorado por no saber cuidarse, como sea, me presento, mi nombre es marta y vine aqui en busca de nuevas especies de plantas  </p>
+           <h1>Margot</h1>
+           <p>Dicelo al ultimo aventurero que fue devorado por no saber cuidarse, como sea, me presento, mi nombre es Margot y vine aqui en busca de nuevas especies de plantas  </p>
        </div> 
        </div>`
       )
@@ -171,7 +171,7 @@ function continuar_dialogo() {
    document.body.addEventListener('keydown', conversar2)
 }
 
-//................... felix ......................
+//................... ${dato.usuario} ......................
 
 function conversar2(event) {
 
@@ -188,8 +188,8 @@ function conversar2(event) {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
-           <p>quiza... eh entrenado mucho antes de salir del pueblo de donde vengo </p>
+           <h1>${dato.usuario}</h1>
+           <p>Quiza... eh entrenado mucho antes de salir del pueblo de donde vengo </p>
        </div> 
        </div>
    
@@ -203,7 +203,7 @@ function conversar2(event) {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
+           <h1>${dato.usuario}</h1>
            <p>Una bruja quiza...? </p>
        </div> 
        </div>
@@ -218,8 +218,8 @@ function conversar2(event) {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
-           <p>no creo que me pase, vengo preparado </p>
+           <h1>${dato.usuario}</h1>
+           <p>yo me llamo ${dato.usuario} y no creo que me pase nada malo, vengo preparado </p>
        </div> 
        </div>
            `)
@@ -227,7 +227,7 @@ function conversar2(event) {
       document.body.addEventListener('keydown', conversar3)
    }
 }
-//................... marta ......................
+//................... Margot ......................
 
 function conversar3() {
 
@@ -245,8 +245,8 @@ function conversar3() {
    </div> 
 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
-           <p>De todos modos debes tener cuidado con esas criaturas maliciosas, por cierto por que vniste a parar aca, no es un lugar muy vistaso por aventureros </p>
+           <h1>Margot</h1>
+           <p>De todos modos debes tener cuidado con esas criaturas maliciosas,¿por cierto por que viniste a parar aca?, no es un lugar muy vistaso por aventureros </p>
        </div> 
        </div>`
          )
@@ -258,8 +258,8 @@ function conversar3() {
    </div> 
 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
-           <p>¿como que bruja? mi nombre es marta y soy una druida... ¿que haces aca de todos modos?  </p>
+           <h1>Margot</h1>
+           <p>¿como que bruja? mi nombre es Margot y soy una druida... ¿que haces aca de todos modos?  </p>
        </div> 
        </div>`
          )
@@ -271,7 +271,7 @@ function conversar3() {
       <div id="imgDialogo1">
    </div> 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
+           <h1>Margot</h1>
            <p>si tu lo dices... ¿rondas por aca por algo en especial? </p>
        </div> 
        </div>`
@@ -285,7 +285,7 @@ function conversar3() {
 // ...........................................parte 2..................................................
 
 
-//................... felix ......................
+//................... ${dato.usuario} ......................
 
 function conversar4(event) {
 
@@ -299,14 +299,14 @@ function conversar4(event) {
        <div id="imgDialogo">
        </div>
         <div id='globoDialogo'>
-        <h1>Felix</h1>
+        <h1>${dato.usuario}</h1>
         <form>
         <fieldset>
             <select name="dialogo1" id="dialogo1" onchange="conversar5()" >
             <option>Seleccionar respuesta:</option>
                <option value="res4">A buscar fortunas</option>
                 <option value="res5">Para volverme un aclamado y famoso guerrero!  </option>
-                <option value="res6">Para salvar al mundo de las maldad </option>
+                <option value="res6">Sali de mi pueblo salvar al mundo de la maldad </option>
             </select>
         </fieldset>
     </form>
@@ -317,7 +317,7 @@ function conversar4(event) {
 }
 
 
-// .......................marta..........................
+// .......................Margot..........................
 
 
 function conversar5() {
@@ -338,7 +338,7 @@ function conversar5() {
    </div> 
 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
+           <h1>Margot</h1>
            <p>Aca mas que plantas y especies raras de animales no vas a encontrar... quiza en el siguiente pueblo puedas hablar con alguien que te pueda pagar bien </p>
        </div> 
        </div>`
@@ -352,7 +352,7 @@ function conversar5() {
    </div> 
 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
+           <h1>Margot</h1>
            <p>uy... ¡cuanta energia! esa es la actitud, aunque por estas horas no hay muchas criaturas de alto nivel</p>
        </div> 
        </div>`
@@ -365,7 +365,7 @@ function conversar5() {
       <div id="imgDialogo1">
    </div> 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
+           <h1>Margot</h1>
            <p>Eso es demaciado dificil si te lo pones a pensar, con tanto villano suelto , aunque me gusta tu energia</p>
        </div> 
        </div>`
@@ -374,7 +374,7 @@ function conversar5() {
    document.body.addEventListener('keydown', conversar6)
 }
 
-// ................... felix ......................
+// ................... ${dato.usuario} ......................
 
 function conversar6(event) {
 
@@ -390,7 +390,7 @@ function conversar6(event) {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
+           <h1>${dato.usuario}</h1>
            <p>Que pena... supongo que me servira como una pratica mas </p>
        </div> 
        </div>
@@ -406,8 +406,8 @@ function conversar6(event) {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
-           <p>No es necesario que sean de alto nivel, la maldad sigue siendo mladad aunque no sea de alto rango</p>
+           <h1>${dato.usuario}</h1>
+           <p>No es necesario que sean de alto nivel, la maldad sigue siendo maldad aunque no sea de alto rango</p>
        </div> 
        </div>
    
@@ -421,7 +421,7 @@ function conversar6(event) {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
+           <h1>${dato.usuario}</h1>
            <p>Si, quiza lo sea, pero no es algo me va a detener tan facilmente </p>
        </div> 
        </div>
@@ -430,7 +430,7 @@ function conversar6(event) {
       document.body.addEventListener('keydown', conversar7)
    }
 }
-// //................... marta ......................
+// //................... Margot ......................
 
 function conversar7() {
    if (event.key === "Enter") {
@@ -446,7 +446,7 @@ function conversar7() {
    </div> 
 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
+           <h1>Margot</h1>
            <p>No te desanimes, seguro encontras algo que te interese en tu viaje, ademas un terrible mal acechará estas tierras en poco tiempo </p>
        </div> 
        </div>`
@@ -459,8 +459,8 @@ function conversar7() {
    </div> 
 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
-           <p>Que veo un aventurero que deja atras la fama para derrotar a la horrible maldad que se avecina</p>
+           <h1>Margot</h1>
+           <p>¿Que veo? un aventurero que deja atras la fama para derrotar a la horrible maldad que se avecina</p>
        </div> 
        </div>`
          )
@@ -472,7 +472,7 @@ function conversar7() {
       <div id="imgDialogo1">
    </div> 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
+           <h1>Margot</h1>
            <p>Muy bien, es mejor que pienses asi, te preparas para la pesadilla que se avecina </p>
        </div> 
        </div>`
@@ -482,7 +482,7 @@ function conversar7() {
    }
 }
 
-// ................... felix ......................
+// ................... ${dato.usuario} ......................
 
 function conversar8(event) {
 
@@ -496,13 +496,13 @@ function conversar8(event) {
        <div id="imgDialogo">
        </div>
         <div id='globoDialogo'>
-        <h1>Felix</h1>
+        <h1>${dato.usuario}</h1>
         <form>
         <fieldset>
             <select name="dialogo1" id="dialogo1" onchange="conversar9()" >
             <option>Seleccionar respuesta:</option>
                <option value="res4">Que maldad se avecina?</option>
-                <option value="res5">Por supuesto!</option>
+                <option value="res5">Por supuesto la derrotaré!</option>
                 <option value="res6">Intentas asustarme?</option>
             </select>
         </fieldset>
@@ -512,7 +512,7 @@ function conversar8(event) {
         `)
    }
 }
-// ................... marta ......................
+// ................... Margot ......................
 
 function conversar9() {
 
@@ -531,7 +531,7 @@ function conversar9() {
              <div id="imgDialogo1">
              </div>
               <div id='globoDialogo'>
-              <h1>Marta</h1>
+              <h1>Margot</h1>
               <p>Te contare a que me refiero, las antiguas leyendes cuentan que en este año un terrible creador liberara atrosidades y solo aquel con la valentia de enfrentarlo, prodra evitar la ruinas de estas tierras, nadie sabe muy bien en que dia sera, pero se rumorea que en las noches mas oscuras las criaturas deciden salir </p>
           </div> 
           </div>
@@ -542,7 +542,7 @@ function conversar9() {
    document.body.addEventListener('keydown', conversar10)
 }
 
-// ................... marta ......................
+// ................... Margot ......................
 
 function conversar10() {
 
@@ -557,7 +557,7 @@ function conversar10() {
           <div id="imgDialogo1">
           </div>
            <div id='globoDialogo'>
-           <h1>Marta</h1>
+           <h1>Margot</h1>
            <p>quien sabe? a lo mejor son puros cuentos para dormir¿o no? comoo sea... si continuas por este camino te contraras con una tienda, a lo mejor se te hace interesante </p>
        </div> 
        </div>
@@ -579,7 +579,7 @@ function conversar11() {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Marta</h1>
+           <h1>Margot</h1>
            <p>Muchas gracias, </p>
        </div> 
        </div>
@@ -602,7 +602,7 @@ function conversar12(event) {
 
 // ...............................segunda pantalla..........................
 
-// .......................Felix..........................
+// .......................${dato.usuario}..........................
 
 var dialogo1 = 0
 
@@ -619,13 +619,13 @@ function conversar_part2_(event) {
        <div id="imgDialogo">
        </div>
         <div id='globoDialogo'>
-        <h1>Felix</h1>
+        <h1>${dato.usuario}</h1>
         <form>
         <fieldset>
             <select name="dialogo" id="dialogo" onchange="continuar_dialogo1()" >
             <option>Seleccionar respuesta:</option>
                <option value="res7">Una tienda en medio de la nada?</option>
-                <option value="res8">Hola! mi nombre es felix</option>
+                <option value="res8">Hola! mi nombre es ${dato.usuario}</option>
                 <option value="res9">Que tienda tan rara tenes</option>
             </select>
 
@@ -673,7 +673,7 @@ function continuar_dialogo1() {
 
     <div id='globoDialogo'>
            <h1>Elis</h1>
-           <p>Hola felix, mi nombre es Elia y soy la dueña de esta tienda, quieres pasar y comprar algo ?</p>
+           <p>Hola ${dato.usuario}, mi nombre es Elia y soy la dueña de esta tienda, quieres pasar y comprar algo ?</p>
        </div> 
        </div>`
       )
@@ -685,7 +685,7 @@ function continuar_dialogo1() {
       <div id="imgDialogo2">
       </div> 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
+           <h1>Margot</h1>
            <p>Si, quizá un poco, el estilo es algo nuevo que quice probar, puedes llamarme innovadora quiza? jejeje </p>
        </div> 
        </div>`
@@ -696,7 +696,7 @@ function continuar_dialogo1() {
 
 
 
-//................... felix ......................
+//................... ${dato.usuario} ......................
 
 function conversar_part2_3(event) {
 
@@ -713,8 +713,8 @@ function conversar_part2_3(event) {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
-           <p>Todos morian antes de llegar hasta aca ? y vos como lograste sobrevivir? </p>
+           <h1>${dato.usuario}</h1>
+           <p>¿Todos morian antes de llegar hasta aca ? ¿y vos como lograste sobrevivir? </p>
        </div> 
        </div>
            `)
@@ -727,8 +727,8 @@ function conversar_part2_3(event) {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
-           <p>Quiza en otra oportunidad, al decir verdad ando corto de oro, pero ya podré comprarte algo </p>
+           <h1>${dato.usuario}</h1>
+           <p>Quiza en otra oportunidad, al decir verdad ando escaso de oro, pero ya podré comprarte algo </p>
        </div> 
        </div>
            `)
@@ -741,7 +741,7 @@ function conversar_part2_3(event) {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
+           <h1>${dato.usuario}</h1>
            <p>Si en absoluto, nunca vi algo similar en estas tierras, por cierto... en algun momento sueltas ese arco que tienes ahí ?</p>
        </div> 
        </div>
@@ -767,7 +767,7 @@ function conversar_part2_4() {
 
     <div id='globoDialogo'>
            <h1>Elis</h1>
-           <p>Me las se arreglar sola, siempre ando con mi arco a mano, veo que vienes de las colinas, buscas a esas criaturas del bosque para cazarlas ?</p>
+           <p>Me las se arreglar sola, siempre ando con mi arco a mano, veo que vienes de los acantilados, ¿buscas a esas criaturas del bosque para cazarlas?</p>
        </div> 
        </div>`
          )
@@ -781,7 +781,7 @@ function conversar_part2_4() {
 
     <div id='globoDialogo'>
            <h1>Elis</h1>
-           <p>no te preocupes, ya podras volver en algun momento, vienes por la cazeria? </p>
+           <p>No te preocupes, ya podras volver en algun momento, ¿vienes por la caceria? </p>
        </div> 
        </div>`
          )
@@ -794,7 +794,7 @@ function conversar_part2_4() {
    </div> 
     <div id='globoDialogo'>
            <h1>Elis</h1>
-           <p>NO. uno nunca sabe cuando algun goblin atacar, hablando de criaturas horribles te interesaria ir de caceria? pago bien </p>
+           <p>NO. uno nunca sabe cuando algun goblin atacar, hablando de criaturas horribles... ¿te interesaria ir de caceria? pago bien </p>
        </div> 
        </div>`
          )
@@ -803,7 +803,7 @@ function conversar_part2_4() {
    document.body.addEventListener('keydown', conversar_part2_5)
 }
 
-//................... felix ......................
+//................... ${dato.usuario} ......................
 
 function conversar_part2_5(event) {
 
@@ -817,12 +817,12 @@ function conversar_part2_5(event) {
        <div id="imgDialogo">
        </div>
         <div id='globoDialogo'>
-        <h1>Felix</h1>
+        <h1>${dato.usuario}</h1>
         <form>
         <fieldset>
             <select name="dialogo" id="dialogo" onchange="continuar_dialogo2()" >
             <option>Seleccionar respuesta:</option>
-               <option value="res10">Que caseria?</option>
+               <option value="res10">Que caceria?</option>
                 <option value="res11">Justamente por eso vine!</option>
                 <option value="res12">En absoluto, pero si hay paga...</option>
             </select>
@@ -839,7 +839,7 @@ function conversar_part2_5(event) {
 function continuar_dialogo2() {
 
    var select = document.getElementById("dialogo")
-   dato.CuartoDialogo = select.options[select.selectedIndex].innerText;
+   dato.QuintoDialogo = select.options[select.selectedIndex].innerText;
    console.log(dato)
    document.body.removeEventListener('keydown', conversar_part2_5)
    selectValue = document.getElementById("dialogo").value;
@@ -855,7 +855,7 @@ function continuar_dialogo2() {
 
     <div id='globoDialogo'>
            <h1>Elis</h1>
-           <p>Una que se organizo todos los años, en esta oportunidad ofresco recompensas muy interesantes ya que son muchas para cazar yo sola </p>
+           <p>Una que se organizo todos los años, en esta oportunidad ofresco recompensas muy interesantes ya que son muchas criaturas para cazar yo sola </p>
        </div> 
        </div>`
       )
@@ -869,7 +869,7 @@ function continuar_dialogo2() {
 
     <div id='globoDialogo'>
            <h1>Elis</h1>
-           <p>muy bien! me alegra oir que se corrio la vos en los pueblos de mi cazeria anual</p>
+           <p>Muy bien! me alegra oir que se corrio la vos en los pueblos de mi caceria anual</p>
        </div> 
        </div>`
       )
@@ -881,7 +881,7 @@ function continuar_dialogo2() {
       <div id="imgDialogo2">
       </div> 
     <div id='globoDialogo'>
-           <h1>Marta</h1>
+           <h1>Margot</h1>
            <p>Con que eres ese tipo de "heroe"... bueno mientras me traigas los materiales que consigas te dare la paga</p>
        </div> 
        </div>`
@@ -905,8 +905,8 @@ function conversar_part2_6(event) {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
-           <p>Perfecto, una aventura asi es lo que necesitaba ! ya mismo voy a partir</p>
+           <h1>${dato.usuario}</h1>
+           <p>Perfecto, ¡una aventura asi es lo que necesitaba! ya mismo deberia partir</p>
        </div> 
        </div>
    
@@ -920,7 +920,7 @@ function conversar_part2_6(event) {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
+           <h1>${dato.usuario}</h1>
            <p>Emmm... si, se habla mucho de eso... por ahi en donde vivo... mejor si me apresuro al lugar ¿donde es?</p>
        </div> 
        </div>
@@ -934,7 +934,7 @@ function conversar_part2_6(event) {
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
+           <h1>${dato.usuario}</h1>
            <p>En es caso acepto, cuentame mas  de lo que tengo que hacer </p>
        </div> 
        </div>
@@ -972,7 +972,7 @@ function conversar_part2_8(event) {
 
    if (event.key === "Enter") {
       document.body.removeEventListener('keydown', conversar_part2_7)
-
+  
       cont1 = document.getElementById('cont1')
       cont1.remove()
       stage1.insertAdjacentHTML('afterbegin', `
@@ -981,7 +981,7 @@ function conversar_part2_8(event) {
       </div> 
 
     <div id='globoDialogo'>
-           <h1>FeliX</h1>
+           <h1>${dato.usuario}</h1>
            <p>Slimes? esas criaturas viscosa? claro que lo haré!  puedo esperar en tu tienda hasta el anochecer? </p>
        </div> 
        </div>`
@@ -1042,9 +1042,10 @@ function conversar_part2_10(event) {
 
 function conversar_part2_11() {
 
+document.body.removeEventListener('keydown', conversar_part2_10)
 
    if (event.key === "Enter") {
-      document.body.removeEventListener('keydown', conversar_part2_10)
+      
       var telon = document.getElementById("telon")
       telon.remove()
 
@@ -1056,47 +1057,39 @@ function conversar_part2_11() {
       </div>
       <div id="EnemigoFinal">
       </div>
+
   `)
-  
+   document.body.addEventListener('keydown', conversar_part2_12)
    }
- document.body.addEventListener('keydown', conversar_part2_12)
 }
 
-
-
-
+contador = 0
 function conversar_part2_12(event) {
 
-   document.body.removeEventListener('keydown', conversar_part2_11)
-
-   if (event.key === "Enter") {
-
+   if (event.key === "Enter" && contador ==0) {
+ document.body.removeEventListener('keydown', conversar_part2_11)
       stage1.insertAdjacentHTML('afterbegin', `
        <div id="cont2">
           <div id="imgDialogo">
           </div>
            <div id='globoDialogo'>
-           <h1>Felix</h1>
+           <h1>${dato.usuario}</h1>
            <p>¿Que clase de criatura es esa...? ¿no se suponia que deberia de encontrar slimes?</p>
        </div> 
        </div>
            `)         
-
-     document.body.addEventListener('keydown', conversar_part2_13)
+     contador++   
    } 
-   
+    document.body.addEventListener('keydown', conversar_part2_13)
 }
 
 function conversar_part2_13(event) {
 
 document.body.removeEventListener('keydown', conversar_part2_12)
 
-   if (event.key === "Enter") {
- 
-      enviar_dialogo(dato)
+   if (event.key === "Enter" && contador==1) {
       var cont2 = document.getElementById('cont2')
       cont2.remove()
-
       stage1.insertAdjacentHTML('afterbegin', `
       <div id="cont2">
            <div id="imgDialogo3">
@@ -1107,50 +1100,39 @@ document.body.removeEventListener('keydown', conversar_part2_12)
         </div> 
         </div>
            `)         
-     
+     contador++
    } 
    document.body.addEventListener('keydown', conversar_part2_14)
 }
 
 function conversar_part2_14(event) {
 
-   document.body.removeEventListener('keydown', conversar_part2_13)
-
-      if (event.key === "Enter") {
-     
+  document.body.removeEventListener('keydown', conversar_part2_13)
+  
+      if (event.key === "Enter" ) {
+      
          var personaje = document.getElementById('personaje')
          personaje.remove()
-         enviar_dialogo(dato)
          var Fondo3= document.getElementById('Fondo3')
          Fondo3.remove() 
          var enemigo = document.getElementById('EnemigoFinal')
          enemigo.remove()
          var cont2 = document.getElementById('cont2')
          cont2.remove()
+
          stage1.insertAdjacentHTML('afterbegin', `
-         <div id="cont3">
+         <div class="home">
                <h1> En ese momento el aventurero sintio el verdadero temor, pero eso no lo detuvo a querer continuar con la aventura , Continuara... </h1>
-               <button  enctype="multipart/form-data" ><a href="/resumen"> Ver historial de aventura </a> </button>
-               </div> 
+               <button onclick="enviar_dialogo()"  enctype="multipart/form-data" ><a href="/resumen"> Ver historial de aventura </a> </button>
            </div>
-              `)       
-              document.body.addEventListener('keydown', conversar_part2_15)  
+              `)           
       }
+      
    }
+ 
 
-   function conversar_part2_15(event) {
-
-
-   if (event.key === "Enter") {
-  document.body.removeEventListener('keydown', conversar_part2_14)
-            var cont2 = document.getElementById('cont2')
-            cont2.remove()
-              
-         }
-      }
-
-function enviar_dialogo(dato) {
-
+function enviar_dialogo() {
+   
    var url = '/dialogo'
 
    fetch(url, {

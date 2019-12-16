@@ -10,18 +10,6 @@ body{
     background-color: black;
 }
 
-/* body {
-    position: fixed;
-    height: 100vw;
-    width: 100vw;
-    background-image: url(3N538nt.gif);
-    background-repeat: no-repeat;
-    background-position: 2vw 0vw;
-    background-size: 96vw 49.5vw;
-    background-color: black;
-    font-family: advanced_pixel-7;
-} */
-
 #Fondo {
     position: fixed;
     height: 100%;
@@ -230,7 +218,79 @@ p{
         75%{display: none;}
     } 
 
-.home {
+.home h1{
+    font-size: 8vw;
  color: white;
 }
 
+.home h2{
+    color: white;
+font-size: 3vw;
+}
+
+.verde{
+    color: greenyellow;
+    margin-top: 0px;
+}
+.home{
+    font-size: 11vw;
+    text-align: center;
+  margin-top: 10vw;
+}
+
+#home{
+    
+    text-align: center;
+  margin-top: 10vw;
+}
+
+#resumen {
+        top: 7vw;
+        text-align: center;
+         color: white;
+    }
+
+
+#resumen h1{
+    font-size:6vw;
+}
+
+#resumen h2{
+margin-top: 0%;
+font-size:4vw;
+}
+
+.llama {
+    position: absolute;
+    height: 33vw;
+    width: 16.54vw;
+    background-position: -123.3vw -166.3vw;
+    top: 6.9vw;
+    background-image: url(./imagenes/!Other2.png);
+    background-size: 165vw;
+    background-repeat: no-repeat;
+    left: 76vw;
+    animation: mymove6 0.8s infinite step-end ;
+}
+
+.llama2 {
+    position: absolute;
+    height: 33vw;
+    width: 16.54vw;
+    background-position: -123.3vw -166.3vw;
+    top: 6.9vw;
+    background-image: url(./imagenes/!Other2.png);
+    background-size: 165vw;
+    background-repeat: no-repeat;
+    left: 9vw;
+    animation: mymove6 0.8s infinite step-end ;
+}
+
+@keyframes mymove6 {
+    0%{  background-position: -123.3vw -166.3vw;}
+    25%{background-position: -137.1vw -166.3vw;}
+    50%{background-position: -123.3vw -166.3vw;}
+    75%{background-position: -151vw -166.3vw;}
+    100%{background-position: -137.1vw -166.3vw;}
+
+}
