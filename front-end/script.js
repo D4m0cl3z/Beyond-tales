@@ -1062,12 +1062,13 @@ document.body.removeEventListener('keydown', conversar_part2_10)
   `)
    document.body.addEventListener('keydown', conversar_part2_12)
    }
+
 }
 
 contador = 0
 function conversar_part2_12(event) {
 
-   if (event.key === "Enter" && contador ==0) {
+   if ( contador ==0) {
  document.body.removeEventListener('keydown', conversar_part2_11)
       stage1.insertAdjacentHTML('afterbegin', `
        <div id="cont2">
@@ -1088,7 +1089,7 @@ function conversar_part2_13(event) {
 
 document.body.removeEventListener('keydown', conversar_part2_12)
 
-   if (event.key === "Enter" && contador==1) {
+   if (contador==1) {
       var cont2 = document.getElementById('cont2')
       cont2.remove()
       stage1.insertAdjacentHTML('afterbegin', `
