@@ -32,6 +32,8 @@ function resumen(dialogos) {
 <h2>¿venis por la caceria? </h2> 
 <h2 class="verde"> ${objDialogo.QuintoDialogo}</h2> <hr style="color: #ffffff" />
       </div>   
+      <hr style="color: #ffffff" />
+      <hr style="color: #ffffff" />
  `)
  })
 }
