@@ -6,8 +6,10 @@
 
 select{
     text-align: center;
-    font-size: 1.7vw;
+    font-size: 2.2vw;
     font-family:advanced_pixel-7 ;
+    background-color:  rgba(100, 148, 237, 0.5);
+
 }
 
 body{

@@ -37,9 +37,10 @@ function mover(event) {
        </div>
     `)
       document.body.addEventListener('keydown', conversar)
+      action++
    }
 
-   if (mov == 50 && action == 1) {
+   if (mov == 50 && action == 2) {
       document.body.removeEventListener('keydown', mover)
       stage1.insertAdjacentHTML('afterbegin', `
       <div id="cont1">
@@ -73,7 +74,14 @@ function mover(event) {
 
  `)
    }
+
+   if (mov == 1.5) {
+      mov=2
+   }
+
 }
+
+var DetenerMovimiento = 
 document.body.addEventListener('keydown', mover)
 var stage1 = document.getElementById("stage1");
 var cont1 = document.getElementById('cont1')
