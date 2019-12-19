@@ -1,5 +1,5 @@
 // Modulos, variables y puerto
-var key 
+
 var path = require("path")
 express = require("express");
 var app = express();

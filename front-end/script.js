@@ -1156,32 +1156,3 @@ function enviar_dialogo() {
       console.log(res)
    })
 }
-
-
-
-// function conversar_part2_13(event) {
-
-//    document.body.removeEventListener('keydown', conversar_part2_12)
-//    if (event.key === "Enter") {
-
-
-//       var cont2 = document.getElementById('cont1')
-//       cont2.remove()
-//       stage1.insertAdjacentHTML('afterbegin', `
-//        <div id="cont2">
-//           <div id="imgDialogo3">
-//           </div>
-//            <div id='globoDialogo'>
-//            <h1>???</h1>
-//            <p> . . . . . </p>
-//        </div> 
-//        </div>
-   
-//            `)
-//    }
-
-//    // document.body.addEventListener('keydown', conversar_part2_14)
-// }
-
-
-
