@@ -1,13 +1,12 @@
 // Modulos, variables y puerto
-
+var key 
 var path = require("path")
 express = require("express");
 var app = express();
 var bodyParser = require('body-parser');
 var puerto = process.env.PORT || 3000;
-var db_dialogos = [];
 var ClienteMongo = require('mongodb').MongoClient;
-var url = `mongodb+srv://DamianDominguez:h1h1Is8pPnyGZ7QG@cluster0-mt4jz.mongodb.net/test?retryWrites=true&w=majority`;
+var url = key ;
 var nombre_db = 'los_dialogos'
 var db;
 
