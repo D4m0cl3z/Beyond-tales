@@ -6,7 +6,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var puerto = process.env.PORT || 3000;
 var ClienteMongo = require('mongodb').MongoClient;
-var url = key ;
+var url = `${key}`;
 var nombre_db = 'los_dialogos'
 var db;
 
